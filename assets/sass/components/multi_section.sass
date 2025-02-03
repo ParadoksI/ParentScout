@@ -1,0 +1,54 @@
+.multi_section
+  display: flex
+  width: 100%
+  @include media('lg')
+    flex-direction: column
+  &__container
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    @include media('lg')
+      width: 100% !important
+      display: flex
+      flex-wrap: wrap
+    @include media('md')
+      display: flex
+      flex-wrap: nowrap
+      flex-direction: column
+    &-mod 
+      display: flex
+      flex-direction: column
+  &__add
+    margin-left: 24px
+    width: 300px
+    @include media('lg')
+      width: 100%
+      margin-left: 0
+      > *
+        display: block
+        margin-left: auto
+        margin-right: auto
+    .wavyBorder
+      margin: 28px 0 0 0 
+
+  &-item 
+    width: 100%
+    @include media('lg')
+      width: calc(33.3333% - 16px)
+    @include media('md')
+      width: 100%
+      display: flex
+      margin-bottom: 1.5rem
+      margin-top: 1rem
+    @include media('sm')
+      display: flex
+      flex-direction: column
+      margin-bottom: 0px
+    &-add 
+      min-width: 0px
+
+  &-mod 
+    display: flex
+    width: 100%
+    @include media('lg')
+      display: flex
+      flex-direction: column

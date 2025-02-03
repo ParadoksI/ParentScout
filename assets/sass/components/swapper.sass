@@ -1,0 +1,40 @@
+.swapper
+  margin: 25px 0 60px 0
+  position: relative
+  @include media('sm')
+    margin: 0px
+  &__btn
+    background: white url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='25' fill='none'%3E%3Cpath fill='%23DB5179' d='M1.25 13.75h24.94l-9.55 9.1a1.25 1.25 0 1 0 1.72 1.8l10.9-10.38a2.5 2.5 0 0 0-.01-3.56L18.36.34A1.25 1.25 0 0 0 16.6.4a1.25 1.25 0 0 0 .04 1.77l9.59 9.09H1.25a1.25 1.25 0 0 0 0 2.5z'/%3E%3C/svg%3E") 50% no-repeat
+    height: 48px
+    width: 48px
+    border-radius: 50%
+    position: absolute
+    top: 35px
+    left: calc(100% - 26px)
+    z-index: 1
+    position: absolute
+    z-index: 1
+    right: 0
+    @include media('lg')
+      display: none !important
+  &__btn-left
+    left: -24px
+    rotate: 180deg
+    right: 0
+  &__container
+    overflow-x: auto
+    overflow-y: hidden
+    gap: 24px
+    flex-shrink: 0
+    width: 100%
+    scroll-behavior: smooth
+    &::-webkit-scrollbar
+      display: none
+  .teaser__item
+    flex-shrink: 0
+    width: 177px
+    text-align: left
+    figure
+      border-bottom: 0
+    h5 p:nth-child(2)
+      padding: 5px 2px 0 0px

@@ -1,0 +1,55 @@
+.teaser-one
+  margin: 26px 0 32px 0
+  &__item
+    @include media('md')
+      flex-direction: column 
+  &__figure
+    width: 49.0%
+    aspect-ratio: 1/0.655
+    margin: 0
+    @include media('md')
+      width: 100%
+  &__content
+    width: 51%
+    background-color: var(--bgGreenColor)
+    @include media('md')
+      width: 100%
+  &__sub-title
+    font-family: Work Sans
+    font-weight: 600
+    font-size: 12px
+    padding-top: 8px
+    letter-spacing: 0.6px
+    color: var(--fontHighlightColor)
+  &__title
+    font-family: Rufina
+    font-size: 30px
+    text-align: center
+    font-weight: 700
+    letter-spacing: 0px
+    padding-top: 7px
+    line-height: 40px
+    color: black
+    @include media('md')
+      width: 90%
+      font-size: calc(16px + 1.2vw)
+  &__anzeige
+    font-size: 10px
+    font-family: Work Sans
+    color: #8e8e8e
+    position: relative
+    top: -5px
+    @include media('md')
+      top: -18px
+      position: relative
+      width: 0
+  &__img
+    transform: scale3d(1,1,1)
+    transition: transform 1.2s ease-in-out
+  &__item:hover
+    .teaser-one__title
+      color: var(--fontHighlightColor)
+    .teaser-one__img
+      transform: scale3d(1.15,1.15,1)
+      @include media('md')
+        transform: scale3d(1,1,1)
