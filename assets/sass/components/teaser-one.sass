@@ -1,38 +1,72 @@
 .teaser-one
-  margin: 26px 0 32px 0
+  margin: 48px 0 30px 0
+  @include media('lg')
+    margin: 25px 0 30px 0
+  @include media('reg')
+    margin: 20px 0px 30px 0px
+  @include media('')
   &__item
     @include media('md')
       flex-direction: column 
   &__figure
-    width: 49.0%
     aspect-ratio: 1/0.655
     margin: 0
+    min-width: 592px
+    width: 592px
+    @include media('lg')
+      min-width: 495px
+      width: 495px
+    @include media('reg')
+      min-width: 368px
+      width: 368px
     @include media('md')
       width: 100%
   &__content
     width: 51%
     background-color: var(--bgGreenColor)
+    display: flex
+    flex-direction: column
     @include media('md')
       width: 100%
   &__sub-title
     font-family: Work Sans
     font-weight: 600
-    font-size: 12px
+    line-height: 20px
+    font-size: 15px
     padding-top: 8px
-    letter-spacing: 0.6px
+    
     color: var(--fontHighlightColor)
+    @include media('lg')
+      font-size: 14px
+    @include media('md')
+      padding-top: 15px
+    @include media('sm')
+      padding-top: 11px
   &__title
     font-family: Rufina
-    font-size: 30px
+    font-size: 32px
     text-align: center
     font-weight: 700
     letter-spacing: 0px
-    padding-top: 7px
-    line-height: 40px
+    padding-top: 5px
+    line-height: 42px
     color: black
+    max-width: 479px
+    @include media('lg')
+      font-size: 30px
+    @include media('reg')
+      font-size: 26px
+      line-height: 32px
     @include media('md')
-      width: 90%
-      font-size: calc(16px + 1.2vw)
+      width: 100%
+      font-size: 22px
+      padding-top: 0px
+      max-width: 100%
+      padding-bottom: 20px
+    @include media('sm')
+      padding-top: 8px
+      padding-bottom: 8px
+      line-height: 25px
   &__anzeige
     font-size: 10px
     font-family: Work Sans
@@ -46,6 +80,7 @@
   &__img
     transform: scale3d(1,1,1)
     transition: transform 1.2s ease-in-out
+    
   &__item:hover
     .teaser-one__title
       color: var(--fontHighlightColor)
@@ -53,3 +88,12 @@
       transform: scale3d(1.15,1.15,1)
       @include media('md')
         transform: scale3d(1,1,1)
+  &-mod 
+    margin: 18px 0px 30px 0px
+    @include media('lg')
+      margin: 30px 0px 30px 0px
+    @include media('md')
+      margin: 17px 0px 30px 0px
+    @include media('sm')
+      margin: 9px 0px 28px 0px
+    

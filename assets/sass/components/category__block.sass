@@ -1,0 +1,64 @@
+.category__block
+    display: flex
+    flex-direction: column
+    gap: 20px
+    padding-bottom: 63px
+    @include media('sm')
+        padding: 0 9px 63px 9px
+    h5
+        line-height: 42px
+        font-size: 30px
+        font-weight: 700
+        font-family: "Rufina"
+    &-list
+        display: flex
+        gap: 25px
+        @include media('md')
+            flex-direction: column
+            gap: 32px
+        &-item 
+            display: flex
+            flex-direction: column 
+            gap: 1px
+            @include media('md')
+                flex-direction: row
+                gap: 16px
+            img
+                width: 100%
+                margin-bottom: 5px
+                @include media('md')
+                    max-width: 340px
+                @include media('sm')
+                    max-width: 185px
+            &-text 
+                display: flex
+                flex-direction: column 
+                gap: 1px
+            &-title 
+                font-family: Work Sans
+                font-weight: 600
+                font-size: 13px
+                line-height: 20px
+                color: var(--fontHighlightColor)
+                text-align: left
+                @include media('reg')
+                    padding-top: 9px
+                @include media('md')
+                    padding-top: 0px
+                    text-align: start
+                @include media('sm')
+                    font-size: 12px
+                    line-height: 20px
+            &-disc
+                font-family: Rufina
+                font-size: 18px
+                font-weight: 700
+                line-height: 24px
+                color: var(--fontDarkColor)
+                text-align: left
+                @include media('md')
+                    padding-top: 2px
+                    text-align: left
+                @include media('sm')
+                    font-size: 1rem
+                    line-height: 19px

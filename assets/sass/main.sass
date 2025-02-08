@@ -18,6 +18,9 @@
 @import 'components/teaser-one'
 @import 'components/multi_section'
 @import 'components/swapper'
+@import 'components/add'
+@import 'components/all-title'
+@import 'components/category__block'
 
 .--d-flex
   display: flex
@@ -31,6 +34,8 @@
   text-align: center
 .--border-bottom
   border-bottom: solid 7px var(--accentColor)
+  @include media('md')
+    border-bottom: solid 5px var(--accentColor)
 .--justify-content-space-between
   justify-content: space-between
 .--justify-content-space-around
@@ -96,7 +101,9 @@
         padding: 0 24px
         padding-bottom: 1rem !important
         @include media('lg')
-          padding: 0 0.5rem
+          padding: 0 1rem
+        @include media('md')
+          padding: 0 9px
         @include media('sm')
           padding: 0
         section:nth-child(6)
@@ -104,25 +111,28 @@
         h3
           font-family: Rufina
           font-weight: 700
-          letter-spacing: -0.1px
+          
           font-size: 24px
-          line-height: 34px
-          padding: 5px 0 0 0
+          line-height: 42px
+          
           a
             color: var(--fontDarkColor)
         .wavyBorder
-          margin: 17px 0 24px 0
+          margin: 17px 0 29px 0
+          &-mod 
+            margin: 17px 0px
+            @include media('lg')
+              margin: 17px 0px 23px 0px
         .wavyBorder:nth-child(8)
           margin: 50px 0 12px 0
         h2
           font-family: Rufina
-          font-size: 30px
+          font-size: 40px
           font-weight: 700
-          letter-spacing: -0.1px
-          padding-top: 5px
-          line-height: 40px
-          a 
-            color: black
+          line-height: 42px
+          color: var(--fontDarkColor)
+          
+
         h3
           .iconArrow
             width: 19px
@@ -159,19 +169,33 @@
         padding: 0 24px
         padding-bottom: 1rem !important
         @include media('lg')
-          padding: 0 0.5rem
+          padding: 0 1rem
+        @include media('md')
+          padding: 0 9px
         @include media('sm')
           padding: 0
         .row:nth-child(1)
-          margin: 28px 0 26px 0
+          margin: 46px 0 19px 0
           @include media('reg')
             padding: 0
-          p
-            font-size: 12px
-            font-family: Work Sans
-            color: #8e8e8e
+          
           a:hover p
             color: var(--fontHighlightColor) !important
+        h2
+          font-family: Rufina
+          font-size: 40px
+          font-weight: 700
+          line-height: 42px
+          color: var(--fontDarkColor)
+        .all-title
+          margin-bottom: 18px
+        .multi_section
+          padding-top: 54px
+          padding-bottom: 88px
+        .wavyBorder
+          margin: 17px 0 29px 0
+          &-mod 
+            margin: 0px 0 29px 0
         .row:nth-child(3)
           margin: 2rem 0 0.5rem 0
           @include media('sm')

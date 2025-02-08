@@ -1,16 +1,30 @@
 .teaser
   min-width: 300px
-  gap: 0 24px
+  gap: 36px 24px
   margin-bottom: 8px
+  @include media('lg')
+    gap: 21px
+  @include media('reg')
+    gap: 16px
+  @include media('md')
+    flex-direction: column
+    padding: 0.5rem
+  @include media('sm')
+    padding: 0 9px
   &__item
-    width: calc(33.3333% - (24px * 2/3)) 
+    width: 378px
+    @include media('lg')
+      width: 316px
+    @include media('reg')
+      width: 234px
     @include media('md')
       width: 100%
       display: flex
-      margin-bottom: 1.5rem
-      margin-top: 1rem
+      gap: 1rem
+      
     @include media('sm')
-      display: block
+      display: flex
+      gap: 10px
       margin-bottom: 0
   &__header2
     font-family: Work Sans
@@ -30,40 +44,50 @@
   &__figure
     margin: 0
     @include media('md')
-      width: 50%
+      width: 340px
     @include media('sm')
-      width: 100%
+      width: 185px
     &-mod 
       overflow: visible !important
   &__content
     font-family: 'Oswald', sans-serif
-    margin-bottom: 31px
+    
     @include media('md')
       width: 50%
     @include media('sm')
-      width: 100%
+      
       margin-bottom: 0
       padding-bottom: 1rem
   &__sub-title
     font-family: Work Sans
     font-weight: 600
-    font-size: 12px
-    padding-top: 13px
+    font-size: 13px
+    line-height: 20px
+    padding-top: 12px
     color: var(--fontHighlightColor)
-    letter-spacing: 0.6px
     text-align: center
+    @include media('reg')
+      padding-top: 9px
+    @include media('md')
+      padding-top: 0px
+      text-align: start
+    @include media('sm')
+      font-size: 12px
+      line-height: 20px
   &__title
     font-family: Rufina
-    font-size: 17px
+    font-size: 18px
     font-weight: 700
-    letter-spacing: 0.5px
-    padding: 5px 0px 0 0px
+    padding: 2px 0px 0 0px
     line-height: 24px
-    color: black
+    color: var(--fontDarkColor)
     text-align: center
+    @include media('md')
+      padding-top: 2px
+      text-align: left
     @include media('sm')
-      font-size: calc(2vw + 11px)
-      line-height: calc(5vw + 10px)
+      font-size: 1rem
+      line-height: 19px
   &__tag
     font-size: 12px !important
     padding: 7px 0px 2px 15px !important
@@ -109,6 +133,9 @@
       transform: scale3d(1.15,1.15,1)
       @include media('md')
         transform: scale3d(1,1,1)
+  &__model-title
+    @include media('sm')
+      padding: 0 9px
 .teaser__item-add
   min-width: 300px
   width: calc(33.333% - 17px)
@@ -125,9 +152,22 @@
     @include media('lg')
       display: none
 .teaser-four
+  margin: 0 0 61px 0
+  @include media('lg')
+    margin: 0 0 30px 0
+  @include media('reg')
+    margin: 0 0 68px 0
+  @include media('md')
+    gap: 26px
+    margin: 0 0 15px 0
+  @include media('sm')
+    gap: 15px 
+    margin: 0 0 68px 0
   .teaser__item
-    width: calc(25% - 18px)
+    
     @include media('lg')
       width: calc(50% - 12px) 
     @include media('md')
       width: 100%
+    @include media('sm')
+      gap: 9px

@@ -3,37 +3,46 @@
   width: 100%
   @include media('lg')
     flex-direction: column
+  @include media('md')
+    display: none !important
   &__container
     display: grid
-    grid-template-columns: repeat(4, 1fr)
+    grid-template-columns: repeat(3, 1fr)
     @include media('lg')
-      width: 100% !important
-      display: flex
-      flex-wrap: wrap
+      isplay: grid
+      grid-template-columns: repeat(3, 1fr)
+      gap: 43px 24px
+    @include media('reg')
+      gap: 43px 16px
+      flex-wrap: nowrap
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
     @include media('md')
       display: flex
       flex-wrap: nowrap
       flex-direction: column
+    &-category
+      gap: 36px 27px
     &-mod 
       display: flex
       flex-direction: column
   &__add
     margin-left: 24px
     width: 300px
+    height: 599px
     @include media('lg')
+      display: none
+    img
       width: 100%
-      margin-left: 0
-      > *
-        display: block
-        margin-left: auto
-        margin-right: auto
+      height: 100%
     .wavyBorder
       margin: 28px 0 0 0 
 
   &-item 
     width: 100%
-    @include media('lg')
-      width: calc(33.3333% - 16px)
+    
+    @include media('reg')
+      width: 100%
     @include media('md')
       width: 100%
       display: flex
@@ -52,3 +61,9 @@
     @include media('lg')
       display: flex
       flex-direction: column
+  &-home
+    padding: 55px 0px 88px 0px
+    @include media('lg')
+      padding: 80px 0px 50px  0px
+    @include media('reg')
+      padding: 60px 0px 50px  0px

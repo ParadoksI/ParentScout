@@ -1,0 +1,42 @@
+.add
+    &-todo 
+        width: 100%
+        display: flex
+        justify-content: center
+        padding-bottom: 74px
+        @include media('lg')
+            padding-bottom: 69px
+        
+        img 
+            max-width: 728px
+        &-mod
+            padding-bottom: 46px
+            @include media('reg')
+                padding-bottom: 57px
+        &-mobile 
+            display: none
+            @include media('lg')
+                display: flex
+                padding-bottom: 0px
+                padding-top: 60px
+            @include media('reg')
+                padding-top: 45px
+            @include media('md')
+                padding-top: 53px
+                padding-bottom: 37px
+            @include media('sm')
+                padding-top: 64px
+                padding-bottom: 57px
+        &-item 
+            &-pc 
+                display: block
+                @include media('md')
+                    display: none
+            &-mobile 
+                display: none
+                @include media('md')
+                    display: block
+        &-pc 
+            &-version
+                @include media('md')
+                    display: none
