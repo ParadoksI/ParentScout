@@ -1,64 +1,84 @@
 .header
-  height: 65px
+  height: 82px
   justify-content: space-between
   width: 100%
   z-index: 1
   background-color: white
-  padding: 0 24px
-  max-width: 1216px
+  padding: 0 48px
+  max-width: 1280px
   border-bottom: solid 3px var(--accentColor)
   @include media('lg')
     width: 100svw
     max-width: 100svw 
-    height: 83px
+    height: 85px
     padding: 0 1rem
+  @include media('md')
+    padding: 0 10px
   @include media('sm')
-    height: 60px !important
+    height: 53px !important
     top: 0px
+    border-top: solid 3px var(--accentColor)
   &__fa-menu
-    height: 15px
+    margin-left: auto
     padding: 0 !important
     border: none
     background-color: transparent
-    display: none
     flex-direction: column
     justify-content: space-between
     @include media('lg')
       display: flex
-    div
-      background-color: var(--fontDarkColor)
-      height: 3px
-      width: 18px
-    &-pc 
-      display: flex
-      margin-left: auto
-      @include media('lg')
-        display: none
+    @include media('reg')
+      min-width: 20px
+      width: 21px
+      height: 18px
+      img
+        height: 100%
+    @include media('md')
+      min-width: 20px
+    @include media('sm')
+      height: 18px
+      img
+        height: 100%
+    // &-pc 
+    //   display: block
+    //   @include media('md')
+    //     display: none
+    // &-mobile 
+    //   display: none
+    //   @include media('md')
+    //     display: block
+  &__links-wrapper 
+    display: flex
+    align-items: center
+    width: 100%
+    @include media('md')
+      gap: 20px
+
 
   &__links-container
     width: 100%
-    gap: 24px
-    align-items: center
-    @include media('lg')
-      flex-direction: column
+    
+    align-items: flex-start
+    flex-direction: column
+    @include media('sm')
+      flex-direction: row
       gap: 0px
-      align-items: flex-start
+      align-items: center
   &__logo
     color: #DB5179
-    font-family: Open Sans
-    font-stretch: condensed
-    font-size: 36px
-    font-weight: 800
-    line-height: 30px
-    letter-spacing: -1px
-    text-wrap: nowrap
+    height: 34px
+    img
+      height: 100%
   &__nav
     margin-top: 3px
     display: flex
     gap: 20px
+    width: 100%
     @include media('lg')
       margin-top: 0px
-    @include media('md')
+      max-width: 100%
+      overflow-x: scroll
+    @include media('sm')
       display: none
   &__link
     color: var(--fontDarkColor-mod)

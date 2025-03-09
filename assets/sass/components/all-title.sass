@@ -1,13 +1,22 @@
 .all-title
+    @include media('sm')
+        padding: 0px 10px
     &__wrapper
         display: flex
         gap: 14px
         max-height: 47px
         align-items: center
+        @include media('sm')
+            gap: 10px
         img
             width: 49px
             height: 47px
         h2 
             color: var(--fontDarkColor)
+            
+        &-item
+            font-size: 30px !important
+            @include media('sm')
+                font-size: 24px !important
         a:hover h2 
             color: var(--fontHighlightColor) !important

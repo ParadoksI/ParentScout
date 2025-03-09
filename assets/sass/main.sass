@@ -91,19 +91,19 @@
     li
       list-style: none
     #wrapper_content
-      max-width: 1232px
+      max-width: 1280px
       margin: auto
       background-color: var(--bgColor)
       @include media('lg')
         width: 100svw
         max-width: 100svw 
       main
-        padding: 0 24px
+        padding: 0 48px
         padding-bottom: 1rem !important
         @include media('lg')
           padding: 0 1rem
         @include media('md')
-          padding: 0 9px
+          padding: 0 10px
         @include media('sm')
           padding: 0
         section:nth-child(6)
@@ -116,7 +116,7 @@
           line-height: 42px
           
           a
-            color: var(--fontDarkColor)
+            color: var(--fontDarkTitle)
         .wavyBorder
           margin: 17px 0 29px 0
           &-mod 
@@ -130,8 +130,9 @@
           font-size: 40px
           font-weight: 700
           line-height: 42px
-          color: var(--fontDarkColor)
-          
+          color: var(--fontDarkTitle)
+          @include media('sm')
+            font-size: 32px
 
         h3
           .iconArrow
@@ -159,43 +160,41 @@
     li
       list-style: none
     #wrapper_content
-      max-width: 1232px
+      max-width: 1280px
       margin: auto
       background-color: var(--bgColor)
       @include media('lg')
         width: 100svw
         max-width: 100svw 
       main
-        padding: 0 24px
+        padding: 0 48px
         padding-bottom: 1rem !important
         @include media('lg')
           padding: 0 1rem
         @include media('md')
-          padding: 0 9px
+          padding: 0 10px
         @include media('sm')
           padding: 0
-        .row:nth-child(1)
-          margin: 46px 0 19px 0
-          @include media('reg')
-            padding: 0
-          
-          a:hover p
-            color: var(--fontHighlightColor) !important
+        
         h2
           font-family: Rufina
           font-size: 40px
           font-weight: 700
           line-height: 42px
-          color: var(--fontDarkColor)
+          color: var(--fontDarkTitle)
+          @include media('sm')
+            font-size: 32px
         .all-title
           margin-bottom: 18px
         .multi_section
           padding-top: 54px
-          padding-bottom: 88px
+          padding-bottom: 58px
         .wavyBorder
           margin: 17px 0 29px 0
           &-mod 
             margin: 0px 0 29px 0
+            @include media('sm')
+              margin: 0px 0 17px 0px
         .row:nth-child(3)
           margin: 2rem 0 0.5rem 0
           @include media('sm')

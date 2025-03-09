@@ -5,7 +5,7 @@
         justify-content: center
         padding-bottom: 74px
         @include media('lg')
-            padding-bottom: 69px
+            padding-bottom: 50px
         
         img 
             max-width: 728px
@@ -13,12 +13,17 @@
             padding-bottom: 46px
             @include media('reg')
                 padding-bottom: 57px
+            &-home
+                padding-top: 0px
+                @include media('md')
+                    padding-top: 50px
+                @include media('sm')
+                    padding-top: 50px
+                    padding-bottom: 40px
         &-mobile 
             display: none
             @include media('lg')
                 display: flex
-                padding-bottom: 0px
-                padding-top: 60px
             @include media('reg')
                 padding-top: 45px
             @include media('md')
@@ -27,11 +32,25 @@
             @include media('sm')
                 padding-top: 64px
                 padding-bottom: 57px
+            &-withp 
+                padding: 0 
+                @include media('md')
+                    padding: 50px 0px 50px 0px
+                @include media('sm')
+                    padding: 0px 0px 50px 0px
+            &-var
+                padding-top: 50px
+                @include media('lg')
+                    padding-bottom: 0px
+                @include media('md')
+                    padding-bottom: 50px
         &-item 
             &-pc 
                 display: block
                 @include media('md')
                     display: none
+            
+                
             &-mobile 
                 display: none
                 @include media('md')
@@ -40,3 +59,11 @@
             &-version
                 @include media('md')
                     display: none
+        &-sub-pc
+            display: none
+            @include media('lg')
+                display: flex
+                padding-top: 50px 
+                padding-bottom: 0px
+            @include media('md')
+                padding-bottom: 50px

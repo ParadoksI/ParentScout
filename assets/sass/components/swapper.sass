@@ -1,12 +1,12 @@
 .swapper
-  margin: 9px 0 46px 0
+  margin:0px 0 46px 0
   position: relative
   @include media('lg')
-    margin: 15px 0 54px 0
+    margin: 0px 0 54px 0
   @include media('md')
-    margin: 15px 0 15px 0px
+    margin: 0px 0 20px 0px
   @include media('sm')
-    margin: 0px
+    margin: 0px 0px 18px 0px
   &__btn
     background: white url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='25' fill='none'%3E%3Cpath fill='%23DB5179' d='M1.25 13.75h24.94l-9.55 9.1a1.25 1.25 0 1 0 1.72 1.8l10.9-10.38a2.5 2.5 0 0 0-.01-3.56L18.36.34A1.25 1.25 0 0 0 16.6.4a1.25 1.25 0 0 0 .04 1.77l9.59 9.09H1.25a1.25 1.25 0 0 0 0 2.5z'/%3E%3C/svg%3E") 50% no-repeat
     height: 48px
@@ -34,6 +34,8 @@
     scroll-behavior: smooth
     @include media('lg')
       gap: 13px
+    @include media('reg')
+      gap: 9px
     &::-webkit-scrollbar
       display: none
   .teaser__item
@@ -54,12 +56,12 @@
       padding: 5px 2px 0 0px
   .teaser__content 
     width: 100%
-  &__sub-title
+  .teaser__sub-title
     padding-top: 7px
     line-height: 20px
     font-weight: 600
     font-size: 12px
-  &__title
+  .teaser__title
     font-size: 16px
     font-weight: 700
     line-height: 20px

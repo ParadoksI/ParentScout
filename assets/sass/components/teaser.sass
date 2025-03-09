@@ -1,16 +1,16 @@
 .teaser
   min-width: 300px
   gap: 36px 24px
-  margin-bottom: 8px
+  
   @include media('lg')
     gap: 21px
   @include media('reg')
-    gap: 16px
+    gap: 25px
   @include media('md')
     flex-direction: column
-    padding: 0.5rem
+    
   @include media('sm')
-    padding: 0 9px
+    padding: 0 10px
   &__item
     width: 378px
     @include media('lg')
@@ -49,6 +49,14 @@
       width: 185px
     &-mod 
       overflow: visible !important
+    &-var 
+      @include media('md')
+        height: 240px
+        img
+          height: 100%
+          object-fit: cover
+      @include media('sm')
+        height: auto
   &__content
     font-family: 'Oswald', sans-serif
     
@@ -66,8 +74,11 @@
     padding-top: 12px
     color: var(--fontHighlightColor)
     text-align: center
+    @include media('lg')
+      font-size: clamp(12px, 8.9685px + 0.3937vw, 13px) // 12, 13, 770, 1024
     @include media('reg')
       padding-top: 9px
+      font-size: 12px
     @include media('md')
       padding-top: 0px
       text-align: start
@@ -82,6 +93,10 @@
     line-height: 24px
     color: var(--fontDarkColor)
     text-align: center
+    @include media('lg')
+      font-size: clamp(16px, 9.937px + 0.7874vw, 18px) // 16, 18, 770, 1024
+    @include media('reg')
+      font-size: 16px
     @include media('md')
       padding-top: 2px
       text-align: left
@@ -127,15 +142,22 @@
     transform: scale3d(1,1,1)
     transition: transform 1.2s ease-in-out
   &__item:hover
-    .teaser__title
-      color: var(--fontHighlightColor)
+    
     .teaser__img
       transform: scale3d(1.15,1.15,1)
       @include media('md')
         transform: scale3d(1,1,1)
   &__model-title
+    padding: 0px 0px 9px 0px
+    @include media('lg')
+      padding: 0px 0px 15px 0px
+    @include media('reg')
+      padding: 0px 0px 11px 0px
+    @include media('md')
+      padding: 0px 0px 18px 0px
+
     @include media('sm')
-      padding: 0 9px
+      padding: 0 9px 18px 9px
 .teaser__item-add
   min-width: 300px
   width: calc(33.333% - 17px)
@@ -162,7 +184,18 @@
     margin: 0 0 15px 0
   @include media('sm')
     gap: 15px 
-    margin: 0 0 68px 0
+    margin: 0 0 50px 0
+  &-mod 
+    @include media('lg')
+      margin: 0px 0px 18px 0px
+    @include media('reg')
+      margin: 0 0 51px 0
+    @include media('md')
+      gap: 26px
+      margin: 0 0 18px 0
+    @include media('sm')
+      gap: 15px 
+      margin: 0 0 50px 0
   .teaser__item
     
     @include media('lg')
@@ -171,3 +204,37 @@
       width: 100%
     @include media('sm')
       gap: 9px
+  &-var
+    @include media('sm')
+      gap: 15px 
+      margin: 0 0 0px 0
+  &-last 
+    margin: 0px 0px 46px 0px
+    @include media('xl')
+      gap: 24px
+      margin: 0px 0px 54px 0px
+    @include media('lg')
+      gap: 13px
+    @include media('reg')
+      gap: 9px
+    @include media('md')
+      margin: 0px 0px 20px 0px
+    @include media('sm')
+      margin: 0px 0px 18px 0px
+    &-item 
+      @include media('xl')
+        &:nth-last-of-type(-n+2)
+          display: none
+      @include media('md')
+        &:nth-last-of-type(-n+3)
+          display: none
+      .teaser__sub-title 
+        text-align: left
+        padding-top: 8px
+        @include media('reg')
+          padding-top: 13px
+        @include media('md')
+          padding-top: 0px 
+      .teaser__title
+        text-align: left
+          

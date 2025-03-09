@@ -4,12 +4,15 @@
     gap: 20px
     padding-bottom: 63px
     @include media('sm')
-        padding: 0 9px 63px 9px
+        padding: 0 10px 63px 10px
     h5
         line-height: 42px
         font-size: 30px
         font-weight: 700
         font-family: "Rufina"
+        color: var(--fontDarkTitle)
+        @include media('reg')
+            font-size: 24px
     &-list
         display: flex
         gap: 25px
@@ -37,7 +40,7 @@
             &-title 
                 font-family: Work Sans
                 font-weight: 600
-                font-size: 13px
+                font-size: 12px
                 line-height: 20px
                 color: var(--fontHighlightColor)
                 text-align: left
@@ -51,7 +54,7 @@
                     line-height: 20px
             &-disc
                 font-family: Rufina
-                font-size: 18px
+                font-size: 16px
                 font-weight: 700
                 line-height: 24px
                 color: var(--fontDarkColor)

@@ -1,31 +1,42 @@
 .teaser-one
   margin: 48px 0 30px 0
   @include media('lg')
-    margin: 25px 0 30px 0
+    margin: 25px 0 25px 0
   @include media('reg')
-    margin: 20px 0px 30px 0px
-  @include media('')
+    margin: 20px 0px 32px 0px
+  @include media('md')
+    margin: 20px 0px 34px 0px
+  @include media('sm')
+    margin: 20px 0px 28px 0px
   &__item
+    height: 382px
+    @include media('lg')
+      height: auto
     @include media('md')
       flex-direction: column 
+      height: auto
   &__figure
     aspect-ratio: 1/0.655
     margin: 0
-    min-width: 592px
-    width: 592px
+    width: 100%
+    min-width: 1px
     @include media('lg')
-      min-width: 495px
-      width: 495px
+      // min-width: 495px
+      // width: 495px
+      width: 100%
+      min-width: 1px
     @include media('reg')
       min-width: 368px
       width: 368px
     @include media('md')
       width: 100%
   &__content
-    width: 51%
+    width: 100%
     background-color: var(--bgGreenColor)
     display: flex
     flex-direction: column
+    @include media('lg')
+      width: 100%
     @include media('md')
       width: 100%
   &__sub-title
@@ -38,6 +49,7 @@
     color: var(--fontHighlightColor)
     @include media('lg')
       font-size: 14px
+      
     @include media('md')
       padding-top: 15px
     @include media('sm')
@@ -50,19 +62,22 @@
     letter-spacing: 0px
     padding-top: 5px
     line-height: 42px
-    color: black
+    color: var(--fontDarkTitle)
     max-width: 479px
     @include media('lg')
       font-size: 30px
+      padding-top: 0px
+      padding: 10px 15px 0px
     @include media('reg')
       font-size: 26px
       line-height: 32px
+      padding-top: 5px
     @include media('md')
       width: 100%
       font-size: 22px
       padding-top: 0px
       max-width: 100%
-      padding-bottom: 20px
+      padding-bottom: 15px
     @include media('sm')
       padding-top: 8px
       padding-bottom: 8px
@@ -80,10 +95,11 @@
   &__img
     transform: scale3d(1,1,1)
     transition: transform 1.2s ease-in-out
+    height: 100%
+    object-fit: cover
     
   &__item:hover
-    .teaser-one__title
-      color: var(--fontHighlightColor)
+    
     .teaser-one__img
       transform: scale3d(1.15,1.15,1)
       @include media('md')
@@ -96,4 +112,15 @@
       margin: 17px 0px 30px 0px
     @include media('sm')
       margin: 9px 0px 28px 0px
+  &-var 
+    margin: 46px 0px 20px 0px
+    @include media('lg')
+      margin: 25px 0 20px 0
+    @include media('reg')
+      margin: 20px 0px 20px 0px
+    @include media('md')
+      margin: 20px 0px 20px 0px
+    @include media('sm')
+      margin: 20px 0px 20px 0px
+
     
