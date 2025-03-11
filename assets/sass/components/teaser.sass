@@ -77,7 +77,7 @@
     @include media('lg')
       font-size: clamp(12px, 8.9685px + 0.3937vw, 13px) // 12, 13, 770, 1024
     @include media('reg')
-      padding-top: 9px
+      
       font-size: 12px
     @include media('md')
       padding-top: 0px
@@ -196,6 +196,14 @@
     @include media('sm')
       gap: 15px 
       margin: 0 0 50px 0
+  &-category
+    @include media('reg')
+      margin: 0px 0px 30px 0px
+    @include media('md')
+      margin: 0px 0px 50px 0px
+    &-var 
+      @include media('md')
+        margin: 0px 0px 50px
   .teaser__item
     
     @include media('lg')
@@ -219,8 +227,10 @@
       gap: 9px
     @include media('md')
       margin: 0px 0px 20px 0px
+      gap: 25px
     @include media('sm')
       margin: 0px 0px 18px 0px
+      gap: 15px
     &-item 
       @include media('xl')
         &:nth-last-of-type(-n+2)
@@ -237,4 +247,7 @@
           padding-top: 0px 
       .teaser__title
         text-align: left
+      .teaser__figure 
+        @include media('md')
+          border-bottom: solid 5px var(--accentColor)
           
